@@ -1,0 +1,187 @@
+/* pages/childrenInfo/childrenInfo.wxss */
+.ai-children-info{
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+}
+.ai-children-info-box{
+  box-sizing: border-box;
+  background: #F7F7FA;
+  overflow: hidden;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.ai-info-box{
+  padding: 0 32rpx 0 112rpx;
+  box-sizing: border-box;
+  margin-top: 20px; 
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+}
+.ai-info-title{
+  color: #1DBFB3;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 70rpx;
+}
+.ai-info-title image{
+  width: 56rpx;
+  height: 56rpx;
+  margin-right: 16rpx;
+}
+.ai-info-box view text{
+  color: #181818;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.ai-info-box>view{
+  margin-top: 48rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  position: relative;
+}
+.ai-info-box>view:last-child{
+  margin-bottom: 48rpx;
+}
+.ai-info-box>view input{
+  padding: 24rpx 0 12rpx 0;
+  color: #181818;
+}
+.ai-info-box>view textarea{
+  margin-top: 20rpx;
+  width: 100%;
+  overflow:hidden; resize:none; 
+}
+.ai-children-gender{
+  overflow: hidden;
+}
+.ai-children-gender view{
+  margin-top: 24rpx;
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  color: #181818;
+}
+.ai-children-gender view::before{
+  content: "";
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  background-image: url('https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_radio_def.png');
+  background-size: 100%;
+  margin-right: 24rpx;
+}
+.ai-fender-active{
+  color: #181818;
+}
+.ai-fender-active::before{
+  background-image: url('https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_radio_sel.png')!important;
+  background-size: 100%!important;
+}
+.ai-children-gender view:first-child{
+  float: left;
+}
+.ai-children-gender view:last-child{
+  float: left;
+  margin-left: 108rpx;
+}
+.ai-select-style picker{
+  margin-top: 24rpx;
+}
+.weui-select{
+  position: relative;
+  color: #ACACAC;
+  height: auto;
+  line-height: initial;
+  padding-left: 0;
+}
+.ai-selected-value{
+  color: #181818!important;
+}
+.weui-select::after{
+  content: "";
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  background-image: url('https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_go.png');
+  background-size: 100%;
+  position: absolute;
+  right: 6rpx;
+  top: 2rpx;
+}
+.weui-btn-area{
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  margin-top: 120rpx;
+  background: #F7F7FA;
+  padding-bottom: 160rpx;
+  margin: 0;
+  padding-top: 48rpx;
+}
+.weui-btn-area .weui-btn{
+  width: 100%!important;
+  width: 390rpx!important;
+  height: 96rpx;
+  background: rgba(29,191,179,.3);
+  border-radius: 48rpx;
+  line-height: 65rpx;
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: normal;
+  letter-spacing: 4rpx;
+  font-weight: 500;
+}
+.ai-check-box{
+  font-size: 28rpx;
+  color: #FF3C48;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: -46rpx;
+}
+.ai-submit-active{
+  color: #fff!important;
+  background:  #1DBFB3!important;
+}
+.weui-primary-loading{
+  margin-left: 24rpx;
+}
+.ai-children-info-box .ai-info-box>view{
+  position: relative;
+}
+.ai-children-info-box .ai-info-box>view::before{
+  content: "";
+  display: inline-block;
+  width: 56rpx;
+  height: 56rpx;
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_hzxx_bbxm.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: -80rpx;
+}
+.ai-children-info-box .ai-info-box:first-child>view:nth-child(2)::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_hzxx_bbxb.png") no-repeat;
+  background-size: 100%;
+}
+.ai-children-info-box .ai-info-box:first-child>view:nth-child(3)::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_hzxx_bbsr.png") no-repeat;
+  background-size: 100%;
+}
+.ai-children-info-box .ai-info-box:last-child>view:nth-child(1)::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_hzxx_jzxm.png") no-repeat;
+  background-size: 100%;
+}
+.ai-children-info-box .ai-info-box:last-child>view:nth-child(2)::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_hzxx_jzdh.png") no-repeat;
+  background-size: 100%;
+}
+.ai-children-info-box .ai-info-box:last-child>view:nth-child(3)::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_hzxx_czdz.png") no-repeat;
+  background-size: 100%;
+}
+.ai-children-info-box .ai-info-box:last-child>view:nth-child(4)::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_hzxx_xxdz.png") no-repeat;
+  background-size: 100%;
+}

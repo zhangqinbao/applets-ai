@@ -1,0 +1,32 @@
+/* pages/abouts/abouts.wxss */
+.ai-abouts-ing{
+  width: 242rpx;
+  height: 242rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+.ai-abouts-ing image{
+  width: 100%;
+}
+.ai-abouts{
+  text-align: center;
+}
+.ai-abouts>text{
+  color: #181818;
+  font-size: 34rpx;
+  margin-top: 48rpx;
+  display: block;
+  font-weight: 500;
+}
+.ai-ingcare{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 120rpx;
+}
+.ai-ingcare text{
+  color: #7B7B7B;
+  font-size: 24rpx;
+  display: block;
+  margin-top: 8rpx;
+}

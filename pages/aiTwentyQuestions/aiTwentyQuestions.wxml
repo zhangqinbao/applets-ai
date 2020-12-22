@@ -1,0 +1,41 @@
+<!--pages/aiTwentyQuestions/aiTwentyQuestions.wxml-->
+<view class="ai-this-nav" style="top:{{navTop}}">
+  <view bindtap="return_page"></view>
+  <view>儿童行为表现问卷</view>
+</view>
+<view class="ai-t-q-box">
+    <view class="ai-t-q">
+      <view class='scrollx'>
+        <view style='transform:translateX({{marquee}}px)'>{{av.pagetitle}}</view>
+      </view>
+      <view class="ai-make-a-question">
+        <!-- 展示list -->
+        <view class="ai-t-q-list ai-t-q-list{{index+1}}"  animation="{{animationList[index]}}"  wx:for="{{subjectArr}}" wx:ket='id' wx:if="{{item.solution==null}}" data-id="{{item.questionId}}"> 
+            <view class="ai-t-number">
+              <image src="https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/img_jdt_{{index+1}}.png"></image>
+            </view>
+            <view class="ai-subject">
+              {{item.content}}
+            </view>
+            <view class="ai-subject-btn">
+              <button class="{{btnActive == 1?'ai-btn-active':''}}" data-type="1" bindtap="selectedSubject" data-index="{{index}}" data-id="{{item.questionId}}">是</button>
+              <button class="{{btnActive == 0?'ai-btn-active':''}}"  bindtap="selectedSubject" data-type="0" data-index="{{index}}" data-id="{{item.questionId}}">否</button>
+            </view>
+            <view class="ai-show-number">{{index+1}}/{{subjectArr.length}}题</view>
+            
+        </view>
+      </view>
+      <view class="ai-transparent-style" wx:if="{{footerView == true}}"></view>
+      <!-- ai-sub-btn-true ai-subject-submit -->
+      <view class="ai-sub-btn {{ingSbumit == true?'ai-sub-btn-true':''}} {{completeSbumit == true ?'ai-subject-submit':''}}  {{completeSbumit1 == true ?'ai-subject-submit1':''}}" bindtap="submitAnswer">
+        <!-- 下一步灰色 -->
+        <image src="../../img/btn_xyt_def.png" wx:if="{{!ingSbumit && !completeSbumit && !completeSbumit1}}"></image>
+        <!-- 下一步高亮 -->
+        <image src="../../img/btn_xyt_sel.png" wx:if="{{ingSbumit && !completeSbumit}}"></image>
+        <!-- 上传视频灰色 -->
+        <image src="../../img/btn_scsp_false.png" wx:if="{{completeSbumit && !completeSbumit1}}"></image>
+        <!-- 上传视频高亮 -->
+        <image src="../../img/btn_scsp_def.png" wx:if="{{completeSbumit1}}"></image>
+      </view>
+    </view>
+</view>

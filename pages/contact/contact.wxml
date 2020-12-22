@@ -1,0 +1,12 @@
+<!--pages/contact/contact.wxml-->
+<view class="ai-contact">
+  <view class="ai-contact-code">
+    <!-- <image src="http://video.sfpt.ingclass.org:820/file/topic/image/1605857528745-13881.png" bindlongpress="saveImg"></image> -->
+    <image style='display:block' src="{{shareIn.shareImg}}"  mode="widthFix" class='siteimg'  bindlongtap="showBigImg" data-src="{{shareIn.shareImg}}" data-url='{{shareIn.shareImg}}'></image>
+
+  </view>
+  <view class="ai-kf">
+    <text>客服微信：EQI6668</text>
+    <view>客服电话：<text bindtap="freeTell">400-606-2105</text></view>
+  </view>
+</view>

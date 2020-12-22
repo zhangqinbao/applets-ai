@@ -1,0 +1,95 @@
+<!--pages/childrenInfo/childrenInfo.wxml-->
+<view class="ai-children-info-box" wx:if="{{pageShow == true && !noNet}}">
+  <view class="ai-info-box">
+    <view>
+      <text>宝宝姓名</text>
+      <view>
+        <input type="text" value="{{showChildrenInfo.name}}" placeholder="请输入宝宝姓名" placeholder-class="phcolor" data-type="1" bindblur="textCheck" maxlength="10" minlength="2" bindinput="childrenName"/>
+      </view>
+			<view class="ai-check-box" wx:if="{{rules.a.status == false}}">{{rules.a.message}}</view>
+    </view>
+    <view>
+      <text>宝宝性别</text>
+      <view class="ai-children-gender">
+        <view class="{{male == true ?'ai-fender-active':''}} {{childrenInfo.gender !=''? childrenInfo.gender ==1?'ai-fender-active':'':''}}" data-type="1" bindtap="selectGender">男</view>
+        <view class="{{female == true ?'ai-fender-active':''}} {{childrenInfo.gender!=''? childrenInfo.gender== 2?'ai-fender-active':'':''}}" data-type="2" bindtap="selectGender">女</view>
+      </view>
+			<view class="ai-check-box" wx:if="{{rules.b.status == false}}">{{rules.b.message}}</view>
+    </view>
+    <view>
+      <text>宝宝生日</text>
+      <view class="ai-select-style">
+        <picker mode="date"  bindchange="selectDate"  start="1980-01-01" end="{{newDate}}" value="{{newDateShow}}">
+          <view class="weui-select {{selectDateType==true?'ai-selected-value':''}}">
+            
+            <block wx:if="{{!pageType}}"> 
+             {{selectDate}}
+            </block>
+            <block wx:if="{{pageType}}"> 
+              {{showChildrenInfo.birthday}}
+            </block>
+          </view>
+        </picker>
+      </view>
+			<view class="ai-check-box" wx:if="{{rules.c.status == false}}">{{rules.c.message}}</view>
+    </view>
+  </view>
+  <view class="ai-info-box">
+    <view>
+      <text>家长姓名</text>
+      <view>
+        <input type="text" placeholder="请输入宝宝家长姓名"  value="{{showChildrenInfo.parentName}}" placeholder-class="phcolor" data-type="2" bindblur="textCheck" maxlength="10" minlength="2"  bindinput="parentName"/>
+      </view>
+			<view class="ai-check-box" wx:if="{{rules.d.status == false}}">{{rules.d.message}}</view>
+    </view>
+    <view>
+      <text>家长手机</text>
+      <view>
+        <input type="number" maxlength="11" placeholder="请输入宝宝家长手机号"  value="{{showChildrenInfo.parentMobile}}" placeholder-class="phcolor"  bindblur="checkParentPhone" bindinput="parentPhone"/>
+      </view>
+			<view class="ai-check-box" wx:if="{{rules.e.status == false}}">{{rules.e.message}}</view>
+    </view>
+    <view>
+      <text>常用地址</text>
+      <view class="ai-select-style">
+        <!-- <picker mode="region"  bindchange="selectAdd">
+          <view class="weui-select {{selectAddType==true?'ai-selected-value':''}}">{{selectAdd}}</view>
+        </picker> -->
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="label">
+          <view class="weui-select {{selectAddType==true?'ai-selected-value':''}}">
+            <block wx:if="{{!pageType}}"> 
+             {{selectAdd}}
+            </block>
+            <block wx:if="{{pageType}}"> 
+              {{showChildrenInfo.province}}{{showChildrenInfo.city}}{{showChildrenInfo.area}}
+            </block>
+          </view> 
+        </picker>
+      </view>
+			<view class="ai-check-box" wx:if="{{rules.f.status == false}}">{{rules.f.message}}</view>
+    </view>
+    <view>
+      <text>详细地址</text>
+      <view>
+        <input type="text"  wx:if="{{!platform}}"  value="{{showChildrenInfo.address}}" placeholder="请输入详细地址" maxlength="40" bindinput="detailedAddress"/>
+        <textarea  wx:if="{{platform}}" placeholder-class="phcolor" value="{{showChildrenInfo.address}}" placeholder="请输入详细地址" maxlength="40" bindinput="detailedAddress" auto-height></textarea>
+      </view>
+			<view class="ai-check-box" wx:if="{{rules.g.status == false}}">{{rules.g.message}}</view>
+    </view>
+  </view>
+</view>
+<view class="weui-btn-area" wx:if="{{pageShow == true && !noNet}}">
+  <a class="weui-btn {{subType == true ? 'ai-submit-active':''}}"  bindtap="sunmitCildrenInfo">完成<text wx:if="{{subActive == true}}" class="weui-primary-loading weui-primary-loading_transparent"><i class="weui-primary-loading__dot"></i></text></a>
+</view>
+
+<!-- 无网络 -->
+<view class="ai-no-net" wx:if="{{noNet}}">
+  <view>
+    <image src="../../img/img_qsy.png"></image>
+    <view>网络出了问题，快去检查一下吧～</view>
+  </view>
+  <button bindtap="refreshNet">刷新</button>
+</view>
+
+
+

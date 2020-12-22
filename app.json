@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/childrenInfo/childrenInfo",
+    "pages/showChildrenInfo/showChildrenInfo",
+    "pages/upVideo/upVideo",
+    "pages/logs/logs",
+    "pages/aiTwentyQuestions/aiTwentyQuestions",
+    "pages/verificationLogs/logs",
+    "pages/setPassword/setPassword",
+    "pages/index/index",
+    "pages/contact/contact",
+    "pages/personalCenter/personalCenter",
+    "pages/allOrders/allOrders",
+    "pages/changePassword/changePassword",
+    "pages/resetPassword/resetPassword",
+    "pages/abouts/abouts",
+    "pages/home/home",
+    "pages/upVideoIndex/upVideoIndex",
+    "pages/viewReport/viewReport",
+    "pages/agreement/agreement"
+  ],
+  "entryPagePath": "pages/childrenInfo/childrenInfo",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

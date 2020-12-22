@@ -1,0 +1,67 @@
+<!--pages/upVideo/upVideo.wxml-->
+<view class="ai-this-nav" style="height:{{globalData.navHeight}}">
+  <view bindtap="returnPage"></view>
+  <view>上传视频</view>
+</view>
+<image class="ai-hiden-img" style="display:none" bindload="imgHieght" mode="widthFix" src="https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/bg_video_1@2x (2).png"></image>
+<view class="ai-upvideo-box" wx:if="{{!noNet}}">
+  <view class="ai-upvideo-title">
+    <view class="ai-upvideo-name ai-upvideo-name{{optionsId}}">
+      {{videoInfo.title}}
+    </view>
+    <view class="ai-upvideo-titile-cont">
+      <block>{{textStr}}<view bindtap="textTransformation" style="position:{{textTransformation?'static':'absolute'}}">
+        <block wx:if="{{contentShowType}}">
+          <block wx:if="{{!textTransformation}}">
+          查看全部<rich-text type='text' nodes='&gt;&gt;' style="display: inline-block;"></rich-text>
+          </block>
+          <block wx:if="{{textTransformation}}">
+            <rich-text type='text' nodes=' &lt;&lt;' style="display: inline-block;"></rich-text>收起
+          </block>
+        </block>
+      </view></block>
+    </view>
+    <view class="ai-video-examples {{playIcon?'ai-video-examples-active':''}}">
+      <video src="{{videoInfo.mediaId}}" objectFit='cover' bindplay="videoPlay" id="ai-sl-Video"  poster="https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/bg_video_1@2x (2).png"></video>
+    </view>
+  </view>
+  <view class="ai-upvideo-operation">
+    <view class="ai-upvideo-name ai-upvideo-name5">上传视频</view>
+    <view class="ai-upvideo-operation-box">
+      <view class="ai-upvideo-btn-box"  bindtap = "chooseVideo" wx:if="{{!videoShowType}}">
+        <view></view>
+        <view>点击上传视频</view>
+      </view>
+      <video src="{{videoUrl}}" id="ai-sl-Video1"  duration="{{duration}}"  bindplay="upVideoPlay" poster="{{videoPUrl}}" wx:if="{{videoShowType}}"></video>
+    </view>
+    <view class="ai-re-upload"  bindtap="chooseVideo"  wx:if="{{success}}">重新上传</view>
+  </view>
+  <view class="ai-preservation-btn {{success ==true?'ai-preservation-btn-active':''}}">
+    <button bindtap="preservation">保存</button>
+  </view>
+</view>
+<!-- 弹框 -->
+<view class="ai-mask" style="display:{{maskType?'flex':'none'}}">
+  <view>
+    <view class="ai-mask-box">
+      <view>提示</view>
+      <view>{{showTetx}}</view>
+      <view>
+        <button bindtap="closeMask" wx:if="{{firstBtn}}"  data-type="{{upType}}">我要返回</button>
+        <button data-type="{{upType}}" bindtap="continue">{{btnText}}</button>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 禁止操作弹框 -->
+<view class="ai-show-mask" wx:if="{{upNumber == 2}}">
+
+</view>
+<!-- 无网络 -->
+<view class="ai-no-net" wx:if="{{noNet}}">
+  <view>
+    <image src="../../img/img_qsy.png"></image>
+    <view>网络出了问题，快去检查一下吧～</view>
+  </view>
+  <button bindtap="refreshNet">刷新</button>
+</view>

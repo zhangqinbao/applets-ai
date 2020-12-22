@@ -1,0 +1,246 @@
+/* pages/allOrders/allOrders.wxss */
+page{
+  background: #F7F7FA;
+  height: 100%;
+}
+.ai-all-order-tab{
+  overflow: hidden;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.ai-all-order-tab>view{
+  float: left;
+  width: 25%;
+  text-align: center;
+  color: #BBBBBB;
+  font-size: 28rpx;
+}
+.ai-all-order-tab>view view{
+  padding: 32rpx 0 24rpx 0;
+  display: inline-block;
+}
+.ai-tab-active{
+  color: #1DBFB3!important;
+  border-bottom: 4rpx solid #1DBFB3;
+  font-weight: 500;
+}
+.ai-order-list{
+  margin-top: 105rpx;
+  overflow: hidden;
+  padding-bottom: 40rpx;
+}
+.ai-order-list-cont{
+  margin-top: 24rpx;
+  background: #fff;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.ai-order-list-cont>view{
+  padding-left: 32rpx;
+}
+.ai-cont-title{
+  position: relative;
+  padding: 16rpx 0;
+  border-bottom: 2rpx solid #EEEEEE;
+}
+.ai-cont-title>text:first-child{
+  float: left;
+  font-size: 32rpx;
+  color: #181818;
+  font-weight: 500;
+}
+.ai-cont-title>text:last-child{
+  float: right;
+  font-size: 28rpx;
+  color: #1DBFB3;
+}
+.ai-cont-title::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.ai-cont-title::before{
+  content: "";
+  display: inline-block;
+  width: 12rpx;
+  height: 24rpx;
+  background: #1DBFB3;
+  border-radius: 6rpx;
+  position: absolute;
+  left: -32rpx;
+  top: 28rpx;
+}
+.ai-order-info>text{
+  margin-top: 20rpx;
+  display: block;
+  font-size: 28rpx;
+  color: #666666;
+}
+.ai-order-info>text:first-child{
+  margin-top: 16rpx;
+}
+.ai-order-to-be-paid .ai-cont-title::before{
+  background: #FF7A00;
+}
+.ai-order-to-be-paid .ai-cont-title>text:last-child{
+  color: #FF7A00;
+  display: flex;
+  align-items: center;
+}
+.ai-order-to-be-paid .ai-cont-title>text:last-child::before{
+  content: "";
+  display: inline-block;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 12rpx;
+  background: #FF7A00;
+  margin-right: 14rpx;
+}
+.ai-order-to-be-paid .ai-order-info>text:nth-child(3) text{
+  color: #FF4545!important;
+}
+.ai-order-info{
+  position: relative;
+}
+.ai-payment{
+  width: 132rpx!important;
+  height: 56rpx!important;
+  line-height:56rpx!important;
+  background: #F7B500;
+  border-radius: 28rpx;
+  padding: 0!important;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: -6rpx;
+}
+.ai-order-closed .ai-cont-title::before{
+  background: #5D6B88;
+}
+.ai-order-closed .ai-cont-title>text:last-child{
+  color: #5D6B88;
+}
+.ai-order-wu{
+  width: 552rpx;
+  height: 508rpx;
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/img_qsy_3@2x (1).png") no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.ai-order-wu text{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  bottom: 58rpx;
+}
+.ai-payment-box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  z-index: 5;
+}
+.ai-opacity-type{
+  animation: myfirst 1s;
+  -webkit-animation: myfirst 1s; /* Safari 与 Chrome */
+  animation-iteration-count:1;
+  -webkit-animation-iteration-count:1;
+  background:  rgba(24, 24, 24, 0.3);
+}
+@keyframes myfirst
+{
+    from {background: rgba(255, 255, 255, 0);}
+    to {background:  rgba(24, 24, 24, 0.3);}
+}
+ 
+@-webkit-keyframes myfirst /* Safari 与 Chrome */
+{
+  from {background: rgba(255, 255, 255, 0);}
+  to {background:  rgba(24, 24, 24, 0.3);}
+}
+.ai-payment-cont{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 44rpx 32rpx 104rpx 32rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-top-left-radius: 48rpx;
+  border-top-right-radius: 48rpx;
+}
+.ai-payment-title{
+  position: relative;
+  text-align: center;
+  color: #000;
+  font-size: 30rpx;
+}
+.ai-close-box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: right;
+}
+.ai-close-box::before{
+  content: "";
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_qx.png") no-repeat;
+  background-size: 100%;
+  margin-top: 10rpx;
+}
+.ai-payment-text{
+  color: #181818;
+  font-size: 28rpx;
+  margin-top: 74rpx;
+}
+.ai-payment-price{
+  padding: 32rpx 0;
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+  margin-top: 32rpx;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 64rpx;
+}
+.ai-payment-price text:first-child{
+  float: left;
+  font-size: 28rpx;
+  color: #666666;
+}
+.ai-payment-price text:last-child{
+  float: right;
+  font-size: 28rpx;
+  color: #181818;
+}
+.ai-payment--btn{
+  width: 260rpx;
+  height: 96rpx;
+  background: #1DBFB3;
+  border-radius: 48rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 96rpx;
+  padding: 0;
+  font-weight: normal;
+  color: #fff;
+}

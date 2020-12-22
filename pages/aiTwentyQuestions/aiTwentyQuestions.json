@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "AI20问",
+  "usingComponents": {},
+  "navigationStyle":"custom",
+  "backgroundColorTop":"#fff",
+  "navigationBarTextStyle":"white",
+  "disableScroll":true
+}

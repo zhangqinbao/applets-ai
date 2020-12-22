@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="ai-this-nav" style="top:{{navTop}}">
+  <view>登录</view>
+</view>
+<view class="container">
+  <button type="primary" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber">微信账号一键登录</button>
+  <navigator url="../logs/logs" class="ai-account-password"  hover-class="btn-hover">账号密码登录</navigator>
+</view>

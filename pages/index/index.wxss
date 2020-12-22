@@ -1,0 +1,29 @@
+/**index.wxss**/
+.container{
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  margin-top: 460rpx;
+}
+.container button{
+  font-size: 34rpx;
+  font-weight: normal;
+  width: 590rpx!important;
+  margin: 0 auto!important;
+  height: 96rpx!important;
+  line-height: 65rpx!important;
+}
+.ai-account-password{
+  color: #7B7B7B;
+  font-size: 28rpx;
+  margin-top: 32rpx;
+  text-align: center;
+}
+.ai-this-nav{
+  position: fixed;
+  z-index: 2;
+  color: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 34rpx;
+}

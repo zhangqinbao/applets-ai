@@ -1,0 +1,53 @@
+<!--pages/allOrders/allOrders.wxml-->
+<view class="ai-all-order" wx:if="{{!noNet}}">
+  <view class="ai-all-order-tab">
+    <view wx:for="{{tabArr}}" wx:key='list'>
+      <view bindtap='changTab' class="{{currentTab == index?'ai-tab-active':''}}" data-index="{{index}}">{{item}}</view>
+    </view>
+  </view>
+    <view class="ai-order-wu" wx:if="{{orderList.length == 0}}"> 
+        <view>
+          <text>暂无订单记录～</text>
+        </view>
+
+    </view>
+    <block wx:if="{{orderList!=undefined}}">
+      <view class="ai-order-list" wx:if="{{orderList.length != 0}}">
+        <view class="ai-order-list-cont {{item.status == 0 || item.status == 2?'ai-order-to-be-paid':''}} {{item.status == 3?'ai-order-closed':''}}" wx:for="{{orderList}}" wx:key="id">
+          <view>
+            <view class="ai-cont-title">
+              <text>{{item.orderCode}}AI筛查</text>
+              <!-- 0 2待付款 1已完成 3已关闭 -->
+              <block wx:if="{{item.status == 0 || item.status == 2}}"> 
+                  <text>待支付</text>
+              </block>
+              <block wx:if="{{item.status == 1}}"> 
+                  <text>已完成</text>
+              </block>
+              <block wx:if="{{item.status == 3}}"> 
+                  <text>已关闭</text>
+              </block>
+            </view>
+            <view class="ai-order-info">
+              <text>下单时间：{{item.createTime}}</text>
+              <block wx:if="{{item.payTradeNo!= null}}">
+                 <text>交易单号：{{item.payTradeNo}}</text>
+              </block>
+              <text>支付金额：<text>¥ {{item.amount}}元</text></text>
+              <block wx:if="{{item.status == 0 || item.status == 2}}">
+                <button class="ai-payment" bindtap="addRecord" data-time="{{item.createTime}}" data-id="{{item.id}}">去支付</button>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+</view>
+<!-- 无网络 -->
+<view class="ai-no-net" wx:if="{{noNet}}">
+  <view>
+    <image src="../../img/img_qsy.png"></image>
+    <view>网络出了问题，快去检查一下吧～</view>
+  </view>
+  <button bindtap="refreshNet">刷新</button>
+</view>

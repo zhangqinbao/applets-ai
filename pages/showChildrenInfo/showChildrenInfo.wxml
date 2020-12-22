@@ -1,0 +1,51 @@
+<!--pages/showChildrenInfo/showChildrenInfo.wxml-->
+<view class="ai-this-nav" style="top:{{navTop}}">
+  <view bindtap="return_page"></view>
+  <view></view>
+</view>
+<view class="ai-info-boxs" wx:if="{{!noNet}}">
+  <view class="ai-info-box">
+    <view class="ai-info-list">
+      <view>
+        <text>宝宝姓名：</text>
+        <text>{{showChildrenInfo.name}}</text>
+      </view>
+      <view>
+        <text>宝宝性别：</text>
+        <text>{{showChildrenInfo.gender == 1?'男':'女'}}</text>
+      </view>
+      <view>
+        <text>宝宝年龄：</text>
+        <text>{{showChildrenInfo.age}}</text>
+      </view>
+      <view>
+        <text>宝宝生日：</text>
+        <text>{{birthday}}</text>
+      </view>
+      <view>
+        <text>家长姓名：</text>
+        <text>{{showChildrenInfo.parentName}}</text>
+      </view>
+      <view>
+        <text>家长电话：</text>
+        <text>{{showChildrenInfo.parentMobile}}</text>
+      </view>
+      <view style="display:block">
+        <text>常住地址：</text>
+        <text>{{showChildrenInfo.province}}{{showChildrenInfo.city}}{{showChildrenInfo.area}}{{showChildrenInfo.address}}</text>
+      </view>
+  </view>
+  </view>
+  <view>
+     <navigator url="../childrenInfo/childrenInfo?type=1" class="ai-edit-children-info">编辑</navigator>
+  </view>
+</view>
+<!-- 无网络 -->
+<view class="ai-no-net" wx:if="{{noNet}}">
+  <view>
+    <image src="../../img/img_qsy.png"></image>
+    <view>网络出了问题，快去检查一下吧～</view>
+  </view>
+  <button bindtap="refreshNet">刷新</button>
+</view>
+

@@ -1,0 +1,11 @@
+<!--pages/abouts/abouts.wxml-->
+
+<view class="ai-abouts">
+  <view class="ai-abouts-ing"><image src="https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/gh_49f513e7c3cb_430.jpg"  mode="widthFix"></image></view>
+  <text>V1.0.0</text>
+  <view class="ai-ingcare">
+    <text>北京正在关怀科技有限公司</text>
+    <text>Copyright © 2014-2020 Ingcare.</text>
+    <text> All Rights Reserved</text>
+  </view>
+</view>

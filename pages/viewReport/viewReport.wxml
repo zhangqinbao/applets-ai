@@ -1,0 +1,63 @@
+<!--pages/viewReport/viewReport.wxml-->
+<view class="ai-view-report">
+  <view class="ai-view-report-title">
+      <view>
+        <view class="ai-view-children-info">
+            <view>
+              <view class="{{chidlredInfo.gender == 2?'ai-girl':''}}"></view>
+              <view>
+                <text>{{chidlredInfo.name}}</text>
+                <text>{{chidlredInfo.age}}</text>
+              </view>
+              <view>
+                <text>综合风险：</text>
+                <text>
+                  <block wx:if="{{summaryLevel == 1}}">低风险</block>
+                  <block wx:if="{{summaryLevel == 2}}">中风险</block>
+                  <block wx:if="{{summaryLevel == 3}}">高风险</block>
+                  <block wx:if="{{summaryLevel == 4}}">无法判断</block>
+                </text>
+              </view>
+            </view>
+            <view>
+                <view class="ai-view-children-cont">
+                 {{summary}}
+                </view>
+            </view>
+        </view>
+      </view>
+  </view>
+  <view class="ai-video-box">
+    <view class="ai-video-list" wx:for="{{reportList}}"  wx:key='id'>
+      <view>
+        <view>{{item.title}}</view>
+        <view>风险等级：
+            <block wx:if="{{item.ratingLevel == 1}}">低风险</block>
+            <block wx:if="{{item.ratingLevel == 2}}">中风险</block>
+            <block wx:if="{{item.ratingLevel == 3}}">高风险</block>
+            <block wx:if="{{item.ratingLevel == 4}}">无法判断</block>
+        </view>
+      </view>
+      <block wx:if="{{videoArr.length!=0}}">
+        <video src="{{videoArr[index]}}" custom-cache="{{false}}"  poster="{{videoUrlArr[index]}}" id="ai-sl-Video{{index}}" bindplay="videoPlay"></video>
+      </block>
+    </view>
+  </view>
+  <view class="ai-tips-text">
+    <text>提示：本报告仅根据您上传的视频做的客观判断，不能作为诊断标准。</text>
+  </view>
+</view>
+
+<!-- 弹框 -->
+<view class="ai-mask" style="display:{{maskType?'flex':'none'}}">
+  <view>
+    <view class="ai-mask-box">
+      <view>提示</view>
+      <view>非wifi网络，正使用流量播放</view>
+      <view>
+        <button bindtap="closeMask">我要返回</button>
+        <button bindtap="continue">继续播放</button>
+      </view>
+    </view>
+  </view>
+</view>

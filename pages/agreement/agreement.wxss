@@ -1,0 +1,19 @@
+/* pages/agreement/agreement.wxss */
+.ai-agreement{
+  padding: 30rpx 40rpx;
+  display: block;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #181818;
+}
+.ai-agreement>text:first-child{
+  text-align: center;
+  display: block;
+  font-size: 32rpx;
+}
+.ai-agreement text{
+  display: block;
+}
+.ai-agreement-margin{
+  margin-top: 10rpx;
+}

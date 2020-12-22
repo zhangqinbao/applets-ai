@@ -1,0 +1,280 @@
+/* pages/upVideo/upVideo.wxss */
+.ai-this-nav{
+  position: fixed;
+  z-index: 3;
+  color: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 34rpx;
+  top: 0;
+  background: #fff;
+  font-weight: 500;
+}
+.ai-this-nav view:first-child{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 34rpx;
+  bottom:  16rpx;
+  text-align: left;
+  z-index: 2;
+}
+.ai-this-nav view:last-child{
+  position: absolute;
+  bottom:  18rpx;
+  width: 100%;
+  text-align: center;
+}
+.ai-this-nav view:first-child::before{
+  content: "";
+  display: inline-block;
+  width: 18rpx;
+  height: 36rpx;
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_nva_back.png");
+  background-size: 100%;
+}
+.ai-show-mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(255,255,255,0);
+}
+.ai-upvideo-box{
+  margin-top: 188rpx;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.ai-upvideo-title{
+  padding: 26rpx 24rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #EEEEEE;
+  border-radius: 24rpx;
+}
+.ai-upvideo-name{
+  color: #181818;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.ai-upvideo-name::before{
+  content: "";
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+.ai-upvideo-name1::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_dzyx.png") no-repeat;
+  background-size: 100%;
+}
+.ai-upvideo-name2::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_tbyx.png") no-repeat;
+  background-size: 100%;
+}
+.ai-upvideo-name3::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_js.png") no-repeat;
+  background-size: 100%;
+}
+.ai-upvideo-name4::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_jzgxwt.png") no-repeat;
+  background-size: 100%;
+}
+.ai-upvideo-titile-cont{
+  font-size: 28rpx;
+  color: #333333;
+  margin-top: 18rpx;
+  position: relative;
+  text-align: justify;
+  padding: 0 4rpx;
+  box-sizing: border-box;
+}
+.ai-upvideo-titile-cont>view{
+  display: inline-block;
+  color: #1DBFB3;
+  position: absolute;
+  right: 2rpx;
+  bottom: 0;
+}
+.ai-video-examples{
+   position: relative;
+   margin: 0 auto;
+   margin-top: 24rpx;
+   height: 358rpx;
+   width: 638rpx;
+   border-radius: 16rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.ai-video-examples::before{
+  content: "视频指导";
+  display: inline-block;
+  padding: 10rpx 16rpx;
+  color: #fff;
+  position: absolute;
+  left: 16rpx;
+  top: 16rpx;
+  z-index: 2;
+  font-size: 24rpx;
+  background: rgba(0,0,0,.6);
+  border-radius: 8rpx;
+}
+.ai-video-examples-active::before{
+  content: "";
+  display: none;
+}
+.ai-upvideo-title video{
+  width: 99%;
+  height: 100%;
+  border-radius: 18rpx;
+}
+.ai-upvideo-operation{
+  padding: 26rpx 24rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #EEEEEE;
+  border-radius: 24rpx;
+  margin-top: 32rpx;
+  position: relative;
+}
+.ai-upvideo-name5::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp.png") no-repeat;
+  background-size: 100%;
+}
+.ai-upvideo-operation-box{
+  width: 100%;
+  height: 360rpx;
+  border-radius: 16rpx;
+  background: #E6F3FF;
+  margin-top: 24rpx;
+}
+.ai-upvideo-operation-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ai-upvideo-btn-box view:first-child{
+  width: 56rpx;
+  height: 56rpx;
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_jh.png") no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+}
+.ai-upvideo-btn-box view:last-child{
+  color: #0083F8;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+}
+.ai-upvideo-operation-box video{
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+.ai-re-upload{
+  width: 136rpx;
+  height: 44rpx;
+  background: #E9F9F7;
+  border-radius: 30rpx;
+  color: #1DBFB3;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 44rpx;
+  position: absolute;
+  right: 24rpx;
+  top: 24rpx;
+}
+.ai-preservation-btn{
+  margin-top: 32rpx;
+
+}
+.ai-preservation-btn button{
+  width: 326rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  border-radius: 50rpx;
+  padding: 0;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 500;
+  background: rgba(29,191,179,.3);
+}
+.ai-preservation-btn-active button{
+  background: #1DBFB3;
+}
+@media screen and (max-width: 415px) and (max-height:740px){
+  .ai-upvideo-box{
+    margin-top: 140rpx;
+  }
+}
+
+
+/* 弹框 */
+.ai-mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.ai-mask>view{
+  padding: 0 54rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.ai-mask-box{
+  width: 100%;
+  padding: 48rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 32rpx;
+}
+.ai-mask-box>view:first-child{
+  text-align: center;
+  font-size: 34rpx;
+  color: #000;
+}
+.ai-mask-box>view:nth-child(2){
+  text-align: center;
+  font-size: 34rpx;
+  color: #666;
+  margin-top: 32rpx;
+}
+.ai-mask-box>view:last-child{
+  overflow: hidden;
+  margin-top: 64rpx;
+  display: flex;
+}
+.ai-mask-box>view:last-child>button{
+  float: left;
+  width: 260rpx;
+  height: 96rpx;
+  border-radius: 50rpx;
+  padding: 0;
+  line-height: 96rpx;
+  font-weight: normal;
+  color: #fff;
+  font-size: 34rpx;
+} 
+ 
+.ai-mask-box>view:last-child>button:first-child{
+  line-height: 93rpx;
+  border: 2rpx solid #1DBFB3;
+  background: #fff;
+  color: #1DBFB3;
+}
+.ai-mask-box>view:last-child>button:last-child{
+  background: #1DBFB3;
+  color: #fff;
+}
+.ai-no-net{
+  margin-top: 200rpx;
+}

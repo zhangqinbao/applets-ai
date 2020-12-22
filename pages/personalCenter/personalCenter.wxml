@@ -1,0 +1,26 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class="ai-this-nav" style="top:{{navTop}}">
+  <view bindtap="return_page"></view>
+  <view>个人中心</view>
+</view>
+<view class="ai-personalCenter">
+    <view class="ai-personalCenter-box"> 
+        <view class="ai-parent-info {{platform?'ai-parent-info-ac':''}}">
+          <block wx:if="{{headPortrait}}">
+            <view><open-data type="userAvatarUrl"></open-data></view>
+            <open-data type="userNickName" lang="zh_CN" class="ai-user-name"></open-data>，您好！
+          </block>
+          <block wx:if="{{!headPortrait}}">
+            <view><image src="https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/img_jz_gir_7@2x.png" mode="widthFix"></image></view>家长，您好！
+          </block>
+        </view>
+        <view class="ai-personalCenter-list">
+            <navigator url="../showChildrenInfo/showChildrenInfo" class="ai-list-style" hover-class="btn-hover">孩子信息</navigator>
+            <navigator url="../allOrders/allOrders" class="ai-list-style" hover-class="btn-hover">全部订单</navigator>
+            <navigator url="../changePassword/changePassword" class="ai-list-style" hover-class="btn-hover">修改密码</navigator>
+            <navigator url="../contact/contact" class="ai-list-style" hover-class="btn-hover">客服电话</navigator>
+            <navigator url="../abouts/abouts" class="ai-list-style" hover-class="btn-hover">关于我们</navigator>
+            <view class="ai-list-style" hover-class="btn-hover" bindtap="signOut">退出登录</view>
+        </view>
+    </view>
+</view>

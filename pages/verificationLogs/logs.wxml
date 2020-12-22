@@ -1,0 +1,23 @@
+  <!--logs.wxml-->
+	<view class="weui-form">
+		<view class="ai-form-info">
+			<text>账号</text>
+			<view>
+				<input type="number" maxlength="11" bindinput="phoneInput" placeholder-class="phcolor" placeholder="请输入您的手机号"/>
+			</view>
+			<view class="ai-check-box" wx:if="{{phoneShowText!=''}}">{{phoneShowText}}</view>
+		</view>
+		<view class="ai-form-info ai-form-info-code">
+			<text>密码</text>
+			<view class="ai-code-box">
+				<input password="{{passwordType}}" bindinput="passwordInput" placeholder-class="phcolor" placeholder="请输入您的密码" maxlength="15"/>
+				<image src="https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon-password1.png" wx:if="{{showPassword == false}}" bindtap="showPassword"></image>
+				<image src="https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon-password.png" wx:if="{{showPassword == true}}" bindtap="showPassword"></image>
+			</view>
+			<view class="ai-check-box" wx:if="{{passwordShowText!=''}}">{{passwordShowText}}</view>
+		</view>
+		<view class="weui-form__opr-area">
+			<button bindtap="signIn"  class="weui-btn weui-btn_primary {{signIn == false?'weui-btn_disabled':''}}">登录</button>
+			<navigator url="../resetPassword/resetPassword" class="ai-account-password"  hover-class="btn-hover">忘记密码</navigator>
+		</view>
+	</view>

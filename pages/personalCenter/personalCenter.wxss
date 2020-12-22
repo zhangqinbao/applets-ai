@@ -1,0 +1,131 @@
+/* pages/personalCenter/personalCenter.wxss */
+page{
+  background: #E9F9F7;
+}
+.ai-personalCenter{
+  height: 504rpx;
+  width: 100%;
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/bg_grzx.png");
+  background-size: 100%;
+  position: relative;
+}
+.ai-personalCenter-box{
+  width: 100%;
+  position: absolute;
+  top: 216rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.ai-parent-info{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.ai-parent-info>view{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 140rpx;
+  border: 6rpx solid #fff;
+  margin-right: 28rpx;
+  overflow: hidden;
+}
+.ai-parent-info-ac>view{
+  border: 8rpx solid #fff!important;
+}
+.ai-parent-info image{
+  width: 100%;
+  height: 100%;
+}
+.ai-personalCenter-list{
+  background: #fff;
+  padding: 40rpx 48rpx;
+  border-radius: 24rpx;
+  margin-top: 52rpx;
+}
+.ai-personalCenter-list .ai-list-style{
+  margin-top: 56rpx;
+  color: #181818;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+}
+.ai-personalCenter-list .ai-list-style:active{
+  background: #fff;
+}
+.ai-personalCenter-list .ai-list-style:first-child{
+  margin-top: 0;
+}
+.ai-personalCenter-list .ai-list-style::before{
+  content: "";
+  width: 56rpx;
+  height: 56rpx;
+  display: inline-block;
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_grzx_hzxx.png");
+  background-size: 100%;
+  margin-right: 24rpx;
+}
+.ai-personalCenter-list .ai-list-style:nth-child(2):before{
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_grzx_qbdd.png");
+  background-size: 100%;
+}
+.ai-personalCenter-list .ai-list-style:nth-child(3):before{
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_grzx_xgmm.png");
+  background-size: 100%;
+}
+.ai-personalCenter-list .ai-list-style:nth-child(4):before{
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_grzx_kfdh.png");
+  background-size: 100%;
+}
+.ai-personalCenter-list .ai-list-style:nth-child(5):before{
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_grzx_gywm.png");
+  background-size: 100%;
+}
+.ai-personalCenter-list .ai-list-style:nth-child(6):before{
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_grzx_tcdl.png");
+  background-size: 100%;
+}
+.ai-personalCenter-list .ai-list-style::after{
+  content: "";
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_go.png");
+  background-size: 100%;
+  position: absolute;
+  right: 0;
+}
+.ai-this-nav{
+  position: fixed;
+  z-index: 2;
+  color: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}
+.ai-this-nav view:first-child{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 34rpx;
+  top: 8rpx;
+  text-align: left;
+}
+.ai-user-name{
+  max-width: 340rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ai-this-nav view:first-child::before{
+  content: "";
+  display: inline-block;
+  width: 18rpx;
+  height: 36rpx;
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_nav_back.png");
+  background-size: 100%;
+}

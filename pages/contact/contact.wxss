@@ -1,0 +1,32 @@
+/* pages/contact/contact.wxss */
+.ai-contact{
+  text-align: center;
+  margin-top: 80rpx;
+}
+.ai-contact-code{
+  width: 430rpx;
+  height: 430rpx;
+  margin: 0 auto;
+}
+.ai-contact-code image{
+  width: 100%;
+  height: 100%;
+}
+.ai-contact .ai-kf>text{
+  font-size: 28rpx;
+  color: #181818;
+  margin-top: 32rpx;
+  display: block;
+}
+.ai-contact .ai-kf>view:last-child{
+  color: #181818;
+  font-size: 28rpx;
+}
+.ai-kf{
+  width: 340rpx;
+    text-align: left;
+    margin: 0 auto;
+}
+.ai-contact .ai-kf>view:last-child text{
+  color: #1DBFB3;
+}

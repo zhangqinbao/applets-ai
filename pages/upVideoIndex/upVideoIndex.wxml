@@ -1,0 +1,63 @@
+<!--pages/upVideoIndex/upVideoIndex.wxml-->
+<view class="ai-this-nav" style="top:{{navTop}}">
+  <view bindtap="returnPage"></view>
+  <view>上传视频</view>
+</view>
+<view class="ai-upvideo-index"  wx:if="{{!noNet}}">   
+  <view class="ai-upvideo-title">
+    <text>家长您好，您需要上传<text>4个</text>情景的资料，视频时长<text>3~5分钟</text>。拍摄角度需要展现儿童的面部表情和肢体动作。拍摄时请保证孩子在画面的中心位置。</text>
+  </view>
+  <view class="ai-upvideo-list-box">
+    <view class="ai-upvideo-list {{item.answerId!=null?'ai-upvideo-completed':''}}" wx:for="{{screenMedia}}" wx:key='id'>
+      <view>
+        <text>{{item.title}}</text>
+        <text>{{item.answerId == null?'未完成':'已完成'}}</text>
+      </view>
+      <block wx:if="{{item.answerId == null}}">
+         <navigator url="../upVideo/upVideo?id={{item.id}}&screenRecordId={{screenRecordId}}" class="ai-navigator-style">去上传</navigator>
+      </block>
+      <block wx:if="{{item.answerId != null}}">
+         <navigator url="../upVideo/upVideo?id={{item.id}}&screenRecordId={{screenRecordId}}" class="ai-navigator-style">去修改</navigator>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="ai-submit-btn {{btnActive?'ai-submit-btn-active':''}}" wx:if="{{!noNet}}">
+  <button bindtap="submitSource">提交</button>
+</view>
+<!-- 弹框 -->
+<view class="ai-mask">
+  <view>
+    <view class="ai-mask-box">
+      <view>提示</view>
+      <view>提交后，视频数据不可再次修改，是否继续提交？</view>
+      <view>
+        <button>我再想想</button>
+        <button>继续提交</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 弹框 -->
+<view class="ai-mask" style="display:{{maskType?'flex':'none'}}">
+  <view>
+    <view class="ai-mask-box">
+      <view>提示</view>
+      <view>提交后，视频数据不可再次修改，是否继续提交？</view>
+      <view>
+        <button bindtap="closeMask">我要返回</button>
+        <button bindtap="continue">继续提交</button>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 无网络 -->
+<view class="ai-no-net" wx:if="{{noNet}}">
+  <view>
+    <image src="../../img/img_qsy.png"></image>
+    <view>网络出了问题，快去检查一下吧～</view>
+  </view>
+  <button bindtap="refreshNet">刷新</button>
+</view>

@@ -1,0 +1,264 @@
+/* pages/viewReport/viewReport.wxss */
+page{
+  background: linear-gradient(180deg, #1DBFB3 0%, #FFFFFF 100%);
+  background-repeat: no-repeat;
+}
+.ai-this-nav{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.ai-this-nav view:first-child{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 34rpx;
+  top: 8rpx;
+  text-align: left;
+}
+.ai-this-nav view:first-child::before{
+  content: "";
+  display: inline-block;
+  width: 18rpx;
+  height: 36rpx;
+  background-image: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_nav_back.png");
+  background-size: 100%;
+}
+.ai-view-report{
+  margin-top: 32rpx;
+}
+.ai-view-report-title{
+  width: 100%;
+  padding: 0 12rpx;
+  box-sizing: border-box;
+}
+.ai-view-report-title>view{
+  padding: 0 12rpx;
+}
+.ai-view-report-title>view:first-child{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/bg_ckbg_s.png") no-repeat;
+  background-size: 100%;
+}
+.ai-view-children-info>view:first-child{
+  padding: 64rpx 46rpx 18rpx 46rpx;
+  overflow: hidden;
+}
+.ai-view-children-info>view:first-child>view{
+  float: left;
+}
+.ai-view-children-info>view:first-child>view text{
+  display: block;
+}
+.ai-view-children-info>view:first-child>view:last-child{
+  float: right;
+}
+.ai-view-children-info>view:first-child>view:first-child{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+  border: 2rpx solid #F7B500;
+  background: url('https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/img_qq_boy_7@2x.png') no-repeat;
+  background-size: 100%;
+  vertical-align: middle;
+  margin-right: 28rpx;
+}
+.ai-girl{
+  background: url('https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/img_mm_gir_7@2x.png') no-repeat!important;
+  background-size: 100%!important;
+}
+.ai-view-children-info>view:first-child>view:nth-child(2) text:first-child{
+  font-size: 32rpx;
+  color:#212121;
+  margin-top: 6rpx;
+}
+.ai-view-children-info>view:first-child>view:nth-child(2) text:last-child{
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+  background: #FDF0CC;
+  color: #F7B500;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  display: inline-block;
+}
+.ai-view-children-info>view:first-child>view:nth-child(3) text:first-child{
+  font-size: 24rpx;
+  color: #6D7278;
+  margin-top: 12rpx;
+  font-weight: 600;
+}
+.ai-view-children-info>view:first-child>view:nth-child(3) text:last-child{
+  font-size: 44rpx;
+  color: #1DBFB3;
+}
+.ai-view-children-info>view{
+  overflow: hidden;
+}
+.ai-view-children-info>view:last-child{
+  padding: 0 8rpx;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  top: -4rpx;
+}
+.ai-view-children-cont{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/bg_ckbg_x.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 18rpx 32rpx 48rpx 32rpx;
+  box-sizing: border-box;
+  color: #333333;
+  font-size: 28rpx;
+  text-indent:58rpx;
+}
+.ai-video-box{
+  padding: 0 32rpx;
+}
+.ai-video-box>view{
+  border: 2rpx solid #eee;
+  padding: 26rpx 24rpx;
+  margin-top: 32rpx;
+  border-radius: 24rpx;
+}
+.ai-video-box>view:first-child{
+  margin-top: 40rpx;
+}
+.ai-video-list>view:first-child{
+  overflow: hidden;
+}
+.ai-video-list>view:first-child view:first-child{
+  float: left;
+  color: #181818;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+}
+.ai-video-list>view:first-child view:last-child{
+  float: right;
+  color: #1DBFB3;
+  font-size: 24rpx;
+  padding: 10rpx 16rpx;
+  background: #DAF7F4;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.ai-video-list>view:first-child view:last-child::before{
+  content: "";
+  width: 12rpx;
+  height: 12rpx;
+  display: inline-block;
+  border-radius: 12rpx;
+  background: #1DBFB3;
+  margin-right: 6rpx;
+}
+.ai-video-list>view:first-child view:first-child::before{
+  content: "";
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_dzyx.png") no-repeat;
+  background-size: 100%;
+  margin-right: 16rpx;
+}
+.ai-video-box .ai-video-list:nth-child(2)>view:first-child view:first-child::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_tbyx.png") no-repeat;
+  background-size: 100%;
+}
+.ai-video-box .ai-video-list:nth-child(3)>view:first-child view:first-child::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_js.png") no-repeat;
+  background-size: 100%;
+}
+.ai-video-box .ai-video-list:nth-child(4)>view:first-child view:first-child::before{
+  background: url("https://ingcare-ai.oss-cn-beijing.aliyuncs.com/20201119/icon_scsp_jzgxwt.png") no-repeat;
+  background-size: 100%;
+}
+.ai-video-list video{
+  width: 100%;
+  height: 360rpx;
+  border-radius: 16rpx;
+  margin-top: 26rpx;
+}
+.ai-tips-text{
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.ai-tips-text text{
+  padding: 24rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #FF4545;
+  display: block;
+  background: #FFF2F2;
+  border: 2rpx solid #FFD9D9;
+  border-radius: 24rpx;
+}
+
+/* 弹框 */
+.ai-mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 11111111355;
+}
+.ai-mask>view{
+  padding: 0 54rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.ai-mask-box{
+  width: 100%;
+  padding: 48rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 32rpx;
+}
+.ai-mask-box>view:first-child{
+  text-align: center;
+  font-size: 34rpx;
+  color: #000;
+}
+.ai-mask-box>view:nth-child(2){
+  text-align: center;
+  font-size: 34rpx;
+  color: #666;
+  margin-top: 32rpx;
+}
+.ai-mask-box>view:last-child{
+  overflow: hidden;
+  margin-top: 64rpx;
+  display: flex;
+}
+.ai-mask-box>view:last-child>button{
+  float: left;
+  width: 260rpx;
+  height: 96rpx;
+  border-radius: 50rpx;
+  padding: 0;
+  line-height: 96rpx;
+  font-weight: normal;
+  color: #fff;
+  font-size: 34rpx;
+} 
+ 
+.ai-mask-box>view:last-child>button:first-child{
+  line-height: 93rpx;
+  border: 2rpx solid #1DBFB3;
+  background: #fff;
+  color: #1DBFB3;
+}
+.ai-mask-box>view:last-child>button:last-child{
+  background: #1DBFB3;
+  color: #fff;
+}
+@media screen and (min-width: 413px){
+  .ai-view-children-info>view:last-child{
+    padding: 0 10rpx;
+  }
+}
